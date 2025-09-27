@@ -1,0 +1,47 @@
+{
+  // File Type Associations
+  "file_types": {
+    // Map file extensions to Sieve language
+    "tide": ["tide", "td", "*.tide", "*.td"]
+  },
+  "languages": {
+    // Define Tide language settings
+    "Tide": {
+      // Associate with your custom language server
+      "language_servers": ["tide-lsp"],
+
+      // Editor behavior for Sieve files
+      "tab_size": 2,
+      "hard_tabs": false,
+      "preferred_line_length": 80,
+
+      // Auto-formatting settings
+      "format_on_save": "on",
+      "formatter": "language_server",
+
+      // Code completion settings
+      "show_completions_on_input": true
+    }
+  },
+  "lsp": {
+    "tide_lsp": {
+      "binary": {
+        // Whether to fetch the binary from the internet, or attempt to find locally.
+        "ignore_system_version": false,
+        // "path": "/path/to/tide-lsp",
+        "path": "./target/release/tide-lsp"
+        // "arguments": ["--option", "value"],
+        // Environment variables for the language server process
+        // "env": {
+        //   "RUST_LOG": "info" // Set log level (debug, info, warn, error)
+        // }
+      },
+      "initialization_options": {
+        "proton_extensions": true,
+        "strict_mode": false,
+        "max_errors": 100,
+        "semantic_analysis": true
+      }
+    }
+  }
+}

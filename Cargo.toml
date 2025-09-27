@@ -1,0 +1,22 @@
+[package]
+name = "zed-tide"
+version = "0.1.0"
+edition = "2024"
+description = "Language support for Tide language"
+license = "AGPL-3.0-or-later"
+readme = "README.md"
+homepage = "https://github.com/arustydev/zed-tide"
+# keywords = [
+#     "tide",
+#     "lsp",
+#     "zed",
+#     "language",
+#     "extension",
+#     "grammar",
+# ]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+zed_extension_api = "0.5.0"
